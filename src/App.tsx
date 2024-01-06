@@ -58,6 +58,11 @@ const App = (): JSX.Element => {
     return todo
   })
 
+  const handleRemoveAllCompleted = (): void => {
+    const newTodos = todos.filter((todo) => !todo.completed)
+    setTodos(newTodos)
+  }
+
   return (
     <div className='todoapp'>
     <Todos
@@ -68,7 +73,7 @@ const App = (): JSX.Element => {
     <Footer
     activeCount={activeCount}
     completedCount={completedCount}
-    onClearCompleted={() => {}}
+    onClearCompleted={handleRemoveAllCompleted}
     filterSelected={filterSelected}
     handleFilterChange={handleFilterChange}
     />
