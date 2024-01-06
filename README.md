@@ -4,8 +4,8 @@
 - [x] Añadir linter para TypeScript + React
 - [x] Añadir estilos del TodoMVC
 - [x] Listar todos los TODOs
-- [o] Poder borrar un TODO
-- [o] Marcar TODO como completado
+- [x] Poder borrar un TODO
+- [x] Marcar TODO como completado
 - [o] Añadir forma de filtrar los TODOs (Footer)
 - [o] Mostrar número de TODOs pendientes (Footer)
 - [o] Añadir forma de borrar todos los TODOs completados
