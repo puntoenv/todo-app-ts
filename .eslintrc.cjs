@@ -1,37 +1,35 @@
 module.exports = {
-  // settings: {
-  //   react: {
-  //     version: "detect",
-  //   },
-  // },
+  settings: {
+    react: {
+      version: "detect",
+    },
+  },
   env: {
     browser: true,
     es2021: true,
   },
   extends: [
     "standard-with-typescript",
-    "eslint:recommended",
     "plugin:react/recommended",
   ],
-  overrides: [
-    {
-      env: {
-        node: true,
-      },
-      files: [".eslintrc.{js,cjs}"],
-      parserOptions: {
-        sourceType: "script",
-      },
-    },
-  ],
+  // overrides: [
+  //   {
+  //     env: {
+  //       node: true,
+  //     },
+  //     files: [".eslintrc.{js,cjs}"],
+  //     parserOptions: {
+  //       sourceType: "script",
+  //     },
+  //   },
+  // ],
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module",
+    project: "./tsconfig.json",
   },
   plugins: ["react"],
   rules: {
-    "@typescript-eslint/space-before-function-paren": "off",
-    "@typescript-eslint/no-non-null-assertion": "off",
-    "@typescript-eslint/triple-slash-reference": "off",
+    'react/react-in-jsx-scope': 'off',
   },
 };
