@@ -1,37 +1,30 @@
-import React, { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '../../../../../vite.svg'
-import './App.css'
+import { useState } from 'react'
+import { Todos } from './components/Todos'
 
-function App (): React.ReactElement {
-  const [count, setCount] = useState(0)
+const mocktTodos = [
+  {
+    id: 1,
+    title: 'Ver el Twich de Midu',
+    completed: true
+  },
+  {
+    id: 2,
+    title: 'Aprender React con TypeScript',
+    completed: false
+  },
+  {
+    id: 3,
+    title: 'Sacar ticket de la miduFest',
+    completed: false
+  }
+]
+
+const App = (): JSX.Element => {
+  const [todos] = useState(mocktTodos)
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button
-          onClick={() => {
-            setCount((count) => count + 1)
-          }}
-        >
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <main className='todoapp'>
+    <Todos todos={todos} />
+    </main>
   )
 }
 
