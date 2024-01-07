@@ -9,8 +9,8 @@
 - [x] Añadir forma de filtrar los TODOs (Footer)
 - [x] Mostrar número de TODOs pendientes (Footer)
 - [x] Añadir forma de borrar todos los TODOs completados
-- [o] Crear Header con input (Header)
-- [o] Crear un TODO (Header)
+- [x] Crear Header con input (Header)
+- [x] Crear un TODO (Header)
 - [o] Poder editar el texto de un TODO (Doble click)
 - [o] Añadir animaciones con AutoAnimate
 - [o] Pasar a reducer
