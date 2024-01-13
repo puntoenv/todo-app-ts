@@ -81,6 +81,22 @@ const App = (): JSX.Element => {
     setTodos([newTodo, ...todos])
   }
 
+  const handleUpdateTodo = ({ id, title }: TodoId & TodoTitle): void => {
+    const newTodos = todos.map((todo) => {
+      if (todo.id === id) {
+        return {
+          ...todo,
+          title
+        }
+      }
+
+      return todo
+    })
+    console.log(newTodos)
+
+    setTodos(newTodos)
+  }
+
   return (
     <div className="todoapp">
       <Header onAddTodo={handleAddTodo} />
@@ -88,6 +104,7 @@ const App = (): JSX.Element => {
         onToggleCompleteTodo={handleCompleted}
         onRemoveTodo={handleRemove}
         todos={filteredTodos}
+        updateTodo={handleUpdateTodo}
       />
       <Footer
         activeCount={activeCount}
