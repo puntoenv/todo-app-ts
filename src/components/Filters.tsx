@@ -6,22 +6,30 @@ interface Props {
   filterSelected: FilterValue
 }
 
-export const Filters: React.FC<Props> = ({ filterSelected, onFilterChange }) => {
+export const Filters: React.FC<Props> = ({
+  filterSelected,
+  onFilterChange
+}) => {
   return (
-        <ul className="filters">
-             {Object.entries(FILTERS_BUTTONS).map(([key, { literal, href }]) => {
-               const isSelected = filterSelected === key
-               const className = isSelected ? 'selected' : ''
-               return (<li key={key}>
-                <a href={href} className={className} onClick={(e) => {
-                  e.preventDefault()
-                  onFilterChange(key as FilterValue)
-                }} >{literal}</a>
-                    </li>)
-             })
-
-             }
-
-        </ul>
+    <ul className="filters">
+      {Object.entries(FILTERS_BUTTONS).map(([key, { literal, href }]) => {
+        const isSelected = filterSelected === key
+        const className = isSelected ? 'selected' : ''
+        return (
+          <li key={key}>
+            <a
+              href={href}
+              className={className}
+              onClick={(e) => {
+                e.preventDefault()
+                onFilterChange(key as FilterValue)
+              }}
+            >
+              {literal}
+            </a>
+          </li>
+        )
+      })}
+    </ul>
   )
 }

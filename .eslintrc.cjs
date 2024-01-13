@@ -8,10 +8,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: [
-    "standard-with-typescript",
-    "plugin:react/recommended",
-  ],
+  extends: ["standard-with-typescript", "plugin:react/recommended"],
   // overrides: [
   //   {
   //     env: {
@@ -30,7 +27,7 @@ module.exports = {
   },
   plugins: ["react"],
   rules: {
-    'react/prop-types': 'off',
-    'react/react-in-jsx-scope': 'off',
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
   },
 };

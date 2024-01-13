@@ -7,11 +7,16 @@ interface Props {
 
 export const Header: React.FC<Props> = ({ onAddTodo }) => {
   return (
-        <header className="header">
-        <h1>Todo <img style={{ width: '60px', height: 'auto' }} src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" alt="typescript" /></h1>
-
-        <CreateTodo saveTodo={onAddTodo} />
-
-        </header>
+    <header className="header">
+      <h1 style={{ color: 'whitesmoke' }}>
+        Todo{' '}
+        <img
+          style={{ width: '60px', height: 'auto' }}
+          src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg"
+          alt="typescript-logo"
+        />
+      </h1>
+      <CreateTodo saveTodo={onAddTodo} />
+    </header>
   )
 }
